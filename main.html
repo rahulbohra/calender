@@ -18,6 +18,7 @@
 	<meta name="robots" content="index">
 
 	<script language="JavaScript" src="astro.js"></script>
+    <script language="javascript" src="jquery-1.6.2.min.js"></script>
 
 	<script language="JavaScript">
 	<!--
@@ -1151,15 +1152,12 @@
 -->
 
 <body bgcolor="#FFFFFF">
-
-	<h1>Calendar Converter</h1>
+<div align="center">
+	<h1>National Calender</h1>
 
 	<hr>
-
-
-
 	<form name="gregorian">
-		<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
+		<table align=left hspace=8 width="100%" border cellpadding=5 bgcolor="#D0D0D0">
 
 			<tr>
 				<th>
@@ -1187,13 +1185,13 @@
 
 						<input type="text" name="leap" value="" size="12" class=ctr readonly>
 
-						<tr>
+						<tr class="hide">
 							<th>
 								Time:
 								<td align=center>
 									<input type="text" name="hour" value="00" size="2">:
 									<input type="text" name="min" value="00" size="2">:
-									<input type="text" name="sec" value="00" size="2">
+									<input type="text" name="sec" value="00" size="2"></td></th></tr>
 
 									<tr>
 										<th>
@@ -1205,8 +1203,8 @@
 													<td colspan=2 align=center>
 														<input type="button" value="Calculate" onClick="calcGregorian();">
 		</table>
-	</form>
-
+ 	</form>
+</div>
 	<script language="JavaScript">
 	<!--
 
@@ -1244,9 +1242,9 @@
 
 	<br clear=left>
 
-	<h3>Julian Day</h3>
+	<h3 class="hide">Julian Day</h3>
 
-	<form name="julianday">
+	<form class="hide" name="julianday">
 		<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
 			<tr>
@@ -1263,7 +1261,7 @@
 
 	<p>
 
-		<form name="modifiedjulianday">
+		<form class="hide" name="modifiedjulianday">
 			<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
 				<tr>
@@ -1282,36 +1280,39 @@
 			<h3>Indian Civil Calendar</h3>
 
 			<form name="indiancivilcalendar">
-				<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
+				<table align=left hspace=8 width="100%" border cellpadding=5 bgcolor="#D0D0D0">
 
 					<tr>
 						<th>
-							Date:
+							Date:</th>
 							<td align=center>
 
 								<input type="text" name="year" value="" size="5">
 								<select name=month size=1>
-									<option value=1>Caitra
-										<option value=2>Vaisakha
-											<option value=3>Jyaistha
-												<option value=4>Asadha
-													<option value=5>Sravana
-														<option value=6>Bhadra
-															<option value=7>Asvina
-																<option value=8>Kartika
-																	<option value=9>Agrahayana
-																		<option value=10>Pausa
-																			<option value=11>Magha
-																				<option value=12>Phalguna
+									<option value=1>Caitra</option>
+										<option value=2>Vaisakha</option>
+											<option value=3>Jyeshta</option>
+												<option value=4>Ashadha</option>
+													<option value=5>Shravana</option>
+														<option value=6>Bhadrapadha</option>
+															<option value=7>Ashvin</option>
+																<option value=8>Kartika</option>
+																	<option value=9>Margasira</option>
+																		<option value=10>Pushya</option>
+																			<option value=11>Magha</option>
+																				<option value=12>Phalguna</option>
 								</select>
-								<input type="text" name="day" value="" size="3">
-
-								<br>Weekday:
-								<input type="text" name="weekday" value="" size="15" class=ctr readonly>
-
+								<input type="text" name="day" value="" size="3"><br>
+								<input type="text" name="leap" value="" size="12" class=ctr readonly>
+								</td>
+                                </tr>
+                                <tr>
+                                <td align="center"><b>Weekday:</b></td>
+                                <td align="center">
+									<input type="text" name="weekday" value="" size="15" class=ctr readonly>
+								</td>
 								<br>
 
-								<input type="text" name="leap" value="" size="12" class=ctr readonly>
 
 								<tr>
 									<td colspan=2 align=center>
@@ -1321,9 +1322,9 @@
 
 		<br clear=left>
 
-		<h3>Julian Calendar</h3>
+		<h3 class="hide">Julian Calendar</h3>
 
-		<form name="juliancalendar">
+		<form class="hide" name="juliancalendar">
 			<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
 				<tr>
@@ -1362,9 +1363,9 @@
 		<br clear=left>
 
 
-		<h3>Hebrew Calendar</h3>
+		<h3 class="hide">Hebrew Calendar</h3>
 
-		<form name="hebrew">
+		<form class="hide" name="hebrew">
 
 			<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
@@ -1410,9 +1411,9 @@
 
 		<br clear=left>
 
-		<h3>Islamic Calendar</h3>
+		<h3 class="hide">Islamic Calendar</h3>
 
-		<form name="islamic">
+		<form class="hide" name="islamic">
 			<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
 				<tr>
@@ -1455,9 +1456,9 @@
 
 		<br clear=left>
 
-		<h3>Persian Calendar</h3>
+		<h3 class="hide">Persian Calendar</h3>
 
-		<form name="persian">
+		<form class="hide" name="persian">
 			<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
 				<tr>
@@ -1500,9 +1501,9 @@
 
 		<br clear=left>
 
-		<h3>Mayan Calendars</h3>
+		<h3 class="hide">Mayan Calendars</h3>
 
-		<form name="mayancount">
+		<form class="hide" name="mayancount">
 			<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
 				<tr>
@@ -1539,9 +1540,9 @@
 
 			<br clear=all>
 
-			<h3>Bah�'� Calendar</h3>
+			<h3 class="hide">Bah�'� Calendar</h3>
 
-			<form name="bahai">
+			<form class="hide" name="bahai">
 				<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
 					<tr>
@@ -1639,9 +1640,9 @@
 
 			<br clear=left>
 
-			<h3>French Republican Calendar</h3>
+			<h3 class="hide">French Republican Calendar</h3>
 
-			<form name="french">
+			<form class="hide" name="french">
 				<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
 					<tr>
@@ -1707,9 +1708,9 @@
 
 			<br clear=left>
 
-			<h3>ISO-8601 Week and Day, and Day of Year</h3>
+			<h3 class="hide">ISO-8601 Week and Day, and Day of Year</h3>
 
-			<form name="isoweek">
+			<form class="hide" name="isoweek">
 				<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
 					<tr>
@@ -1728,7 +1729,7 @@
 
 			<p>
 
-				<form name="isoday">
+				<form class="hide" name="isoday">
 					<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
 						<tr>
@@ -1746,9 +1747,9 @@
 
 				<br clear=left>
 
-				<h3>Unix <tt>time()</tt> value</h3>
+				<h3 class="hide">Unix <tt>time()</tt> value</h3>
 
-				<form name="unixtime">
+				<form class="hide" name="unixtime">
 					<table align=left width="45%" hspace=8 border cellpadding=5 bgcolor="#D0D0D0">
 
 						<tr>
@@ -1765,9 +1766,9 @@
 
 				<br clear=left>
 
-				<h3>Excel Serial Day Number</h3>
+				<h3 class="hide">Excel Serial Day Number</h3>
 
-				<form name="excelserial1900">
+				<form class="hide" name="excelserial1900">
 					<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
 						<tr>
@@ -1788,7 +1789,7 @@
 
 					<br clear=left>
 
-					<form name="excelserial1904">
+					<form class="hide" name="excelserial1904">
 						<table align=left hspace=8 width="45%" border cellpadding=5 bgcolor="#D0D0D0">
 
 							<tr>
@@ -1811,6 +1812,12 @@
 					<!--
 					calcGregorian(); // Calculate today's values in other calendars
 					 // -->
+					</script>
+                    
+                    <script>
+						$(document).ready(function(e) {
+                            $('.hide').hide();
+                        });
 					</script>
 
 
