@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+	xmlns:gap = "http://phonegap.com/ns/1.0"
+	id        = "com.spaceman4walk.calender"
+	version   = "1.0.0">
+	<name>National Calender</name>
+	<description>
+		National Calender
+	</description>
+	<author email="rahulthespaceman@gmail.com">
+		Rahul Bohra
+	</author>
+	<feature name="http://plugins.phonegap.com/ChildBrowser/2.0.1" />
+	<access origin="*"/>
+	<icon src="icon.png" gap:role="default" />
+</widget>
