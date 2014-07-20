@@ -877,6 +877,7 @@
             indcal = jd_to_indian_civil(j);
             document.indiancivilcalendar.year.value = indcal[0];
             document.indiancivilcalendar.month.selectedIndex = indcal[1] - 1;
+			
             document.indiancivilcalendar.day.value = indcal[2];
             document.indiancivilcalendar.weekday.value = INDIAN_CIVIL_WEEKDAYS[weekday];
             document.indiancivilcalendar.leap.value = NormLeap[leap_gregorian(indcal[0] + 78) ? 1 : 0];
@@ -1096,12 +1097,12 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
 	                <span class="sr-only">Toggle navigation</span>
                 </button>
-                <a class="navbar-brand" href="#">INC</a>
+                <a class="navbar-brand" href="main.html">INC</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse-01">
                 <ul class="nav navbar-nav">           
-	                <li><a href="#fakelink">About National Calender</a></li>
-    	            <li><a href="#fakelink">About Akashmitra</a></li>
+	                <li><a href="gregorian_inc.html">About National Calender</a></li>
+    	            <li><a href="amm.html">About Akashmitra</a></li>
                 </ul>           
             </div><!-- /.navbar-collapse -->
         </nav><!-- /navbar -->
@@ -1725,8 +1726,8 @@
                         </form>
 		<br />
         <nav class="navbar navbar-inverse navbar-fixed-bottom" role="footer">
-            <div class="navbar-header">
-				<a class="navbar-brand" href="http://websiteforstartups.com">websiteforstartups.com</a>
+            <div class="col-xs-12 navbar-header">
+				<a class="col-xs-12 navbar-brand" href="http://websiteforstartups.com" style="text-align:center">websiteforstartups.com</a>
             </div>
         </nav><!-- /navbar -->
 
