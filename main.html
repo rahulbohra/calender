@@ -41,7 +41,7 @@
         var J1900 = 2415020.5;	// Epoch (day 1) of Excel 1900 date system (PC)
         var J1904 = 2416480.5;	// Epoch (day 0) of Excel 1904 date system (Mac)
     
-        var NormLeap = new Array("Normal year", "Leap year");
+        var NormLeap = new Array("Non - Leap year", "Leap year");
     
         /*  WEEKDAY_BEFORE  --  Return Julian date of given weekday (0 = Sunday) in the seven days ending on jd.  */
         function weekday_before(weekday, jd) {
@@ -1106,9 +1106,8 @@
                 </ul>           
             </div><!-- /.navbar-collapse -->
         </nav><!-- /navbar -->
-        
-        <br /><br />
-        <div class="container">
+
+        <div class="container" style="position:relative; margin-top:60px">
             <h4>Gregorian</h4>
 
             <form name="gregorian">
